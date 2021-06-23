@@ -1,30 +1,30 @@
-#ÏîÄ¿Æô¶¯¶Ë¿ÚºÅ
+#ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ë¿Úºï¿½
 server:
   port: 8888
 
 #
 spring:
-  # mysqlÊı¾İ¿âÁ¬½Ó
+  # mysqlï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/sport_mgmt_sys_db?serverTimezone=GMT%2B8
     username: root
-    password: asd123
-    # alibaba druidÁ¬½Ó³ØÅäÖÃ
+    password: 123456
+    # alibaba druidï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½
     type: com.alibaba.druid.pool.DruidDataSource
-    # ÉèÖÃ×î´ó×îĞ¡Á¬½ÓÊı
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     dbcp2:
       initial-size: 1
       max-idle: 20
       min-idle: 1
-    # ÉèÖÃÊı¾İ¿â»ñÈ¡Á¬½ÓµÈ´ı³¬Ê±µÄÊ±¼ä(6·ÖÖÓ)
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½È¡ï¿½ï¿½ï¿½ÓµÈ´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê±ï¿½ï¿½(6ï¿½ï¿½ï¿½ï¿½)
       max-wait-millis: 60000
-  # Jackson ¸ñÊ½ÉèÖÃ
+  # Jackson ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
-# mybatis¿ªÆôÆ¥ÅäÍÕ·å¸ñÊ½µÄÃüÃû£¨Êı¾İ¿âÖĞ"s_a" == sA£©
+# mybatisï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½Õ·ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½"s_a" == sAï¿½ï¿½
 mybatis:
   configuration:
     mapUnderscoreToCamelCase: true
