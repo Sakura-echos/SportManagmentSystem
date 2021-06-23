@@ -1,30 +1,40 @@
-#��Ŀ�����˿ں�
+# config server port
 server:
   port: 8888
 
-#
 spring:
-  # mysql���ݿ�����
+  # config database
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sport_mgmt_sys_db?serverTimezone=GMT%2B8
+    url: jdbc:mysql://rm-bp183u1i04bt0kb2xvo.mysql.rds.aliyuncs.com:3306/sport_mgmt_sys_db?serverTimezone=GMT%2B8
     username: root
-    password: 123456
-    # alibaba druid���ӳ�����
+    password: aliyun123
+    # config alibaba DataSource
     type: com.alibaba.druid.pool.DruidDataSource
-    # ���������С������
     dbcp2:
       initial-size: 1
       max-idle: 20
       min-idle: 1
-    # �������ݿ��ȡ���ӵȴ���ʱ��ʱ��(6����)
+    # connect database max wait millions
       max-wait-millis: 60000
-  # Jackson ��ʽ����
+  # redis config
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    password:
+    lettuce:
+      # redis thread config
+      pool:
+        max-active: 10
+        max-idle: 6
+        max-wait: 1000
+        min-idle: 0
+      shutdown-timeout: 100
+
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-
-# mybatis����ƥ���շ��ʽ�����������ݿ���"s_a" == sA��
+# reflect database and className
 mybatis:
   configuration:
     mapUnderscoreToCamelCase: true
